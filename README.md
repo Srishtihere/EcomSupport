@@ -1,5 +1,5 @@
 <p align="center">
-  <img style="border-width: 0" width="400" height="400" src="./src/assets/logo.png" alt="ecom logo">
+  <img style="border-width: 0" width="auto" height="400" src="./src/assets/logo.png" alt="ecom logo">
 </p>
 
 # JustJoking
@@ -13,10 +13,12 @@ Ecommerce-Support : Customer Support Service Application using CallChimp TypeScr
 ### Mobile Device:
 
 <img src="./src/assets/mobile_SS.png" height='500px'>
+<img src="./src/assets/mobile_SS_2.png" height='500px'>
 
 ### Laptop Device:
 
 <img src="./src/assets/desktop_SS.png" height='500px'>
+<img src="./src/assets/desktop_SS_2.png" height='500px'>
 
 ## Tech/ Framework Used
 
