@@ -123,41 +123,75 @@ const ActionsPage = () => {
     console.log(callType);
   }, [callType]);
 
-  const callHandler = async (
+  // const callHandler = async (
+  //   value: number,
+  //   calltype: string | undefined,
+  //   vendorLeadCode: string
+  // ) => {
+  //   try {
+  //     if (calltype === "blastout") {
+  //       const makeCall = await CallAPI.callsPost({
+  //         callsPostRequest: {
+  //           lead: value,
+  //           transactionVars: {},
+  //           vendorLeadCode: vendorLeadCode,
+  //         },
+  //       });
+  //     } else if (calltype === "transactional") {
+  //       const makeCall = await CallAPI.callsPost({
+  //         callsPostRequest: {
+  //           lead: value,
+  //           transactionVars: {
+  //             order_id: "456654",
+  //           },
+  //           vendorLeadCode: vendorLeadCode,
+  //         },
+  //       });
+  //     } else {
+  //       const makeCall = await CallAPI.callsPost({
+  //         callsPostRequest: {
+  //           lead: value,
+  //           transactionVars: {},
+  //           vendorLeadCode: vendorLeadCode,
+  //         },
+  //       });
+  //     }
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
+
+  const callHandler = (
     value: number,
     calltype: string | undefined,
     vendorLeadCode: string
   ) => {
-    try {
-      if (calltype === "blastout") {
-        const makeCall = await CallAPI.callsPost({
-          callsPostRequest: {
-            lead: value,
-            transactionVars: {},
-            vendorLeadCode: vendorLeadCode,
+    if (calltype === "blastout") {
+      CallAPI.callsPost({
+        callsPostRequest: {
+          lead: value,
+          transactionVars: {},
+          vendorLeadCode: vendorLeadCode,
+        },
+      });
+    } else if (calltype === "transactional") {
+      CallAPI.callsPost({
+        callsPostRequest: {
+          lead: value,
+          transactionVars: {
+            order_id: "456654",
           },
-        });
-      } else if (calltype === "transactional") {
-        const makeCall = await CallAPI.callsPost({
-          callsPostRequest: {
-            lead: value,
-            transactionVars: {
-              order_id: "456654",
-            },
-            vendorLeadCode: vendorLeadCode,
-          },
-        });
-      } else {
-        const makeCall = await CallAPI.callsPost({
-          callsPostRequest: {
-            lead: value,
-            transactionVars: {},
-            vendorLeadCode: vendorLeadCode,
-          },
-        });
-      }
-    } catch (error) {
-      console.error(error);
+          vendorLeadCode: vendorLeadCode,
+        },
+      });
+    } else {
+      CallAPI.callsPost({
+        callsPostRequest: {
+          lead: value,
+          transactionVars: {},
+          vendorLeadCode: vendorLeadCode,
+        },
+      });
     }
   };
 
