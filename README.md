@@ -22,8 +22,6 @@ Ecommerce-Support : Customer Support Service Application using CallChimp TypeScr
 
 ## Tech/ Framework Used
 
-## Technologies Used
-
 - ReactJS
 - Bootstrap
 - React Router
